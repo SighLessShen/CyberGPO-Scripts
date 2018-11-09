@@ -1,4 +1,4 @@
-# CyberGPO-Scripts
+#Scripts
 
 Cyber Warriors 0!
 
