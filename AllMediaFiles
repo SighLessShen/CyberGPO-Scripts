@@ -1,0 +1,73 @@
+# PowerShell script to list the media files under the users folder
+$Dir = get-childitem C:\Users -recurse
+# $Dir |get-member
+
+New-Item -ItemType directory -Path C:\Scripts\
+
+$List = $Dir | where {$_.extension -eq ".txt"}
+$List |ft fullname |out-file C:\Scripts\text.txt
+
+$List = $Dir | where {$_.extension -eq ".mp3"}
+$List |ft fullname |out-file C:\Scripts\mp3.txt
+
+$List = $Dir | where {$_.extension -eq ".mov"}
+$List |ft fullname |out-file C:\Scripts\mov.txt
+
+$List = $Dir | where {$_.extension -eq ".mp4"}
+$List |ft fullname |out-file C:\Scripts\mp4.txt
+
+$List = $Dir | where {$_.extension -eq ".jpg"}
+$List |ft fullname |out-file C:\Scripts\jpg.txt
+
+$List = $Dir | where {$_.extension -eq ".jpeg"}
+$List |ft fullname |out-file C:\Scripts\jpeg.txt
+
+$List = $Dir | where {$_.extension -eq ".wav"}
+$List |ft fullname |out-file C:\Scripts\wav.txt
+
+$List = $Dir | where {$_.extension -eq ".avi"}
+$List |ft fullname |out-file C:\Scripts\avi.txt
+
+$List = $Dir | where {$_.extension -eq ".flv"}
+$List |ft fullname |out-file C:\Scripts\flv.txt
+
+$List = $Dir | where {$_.extension -eq ".png"}
+$List |ft fullname |out-file C:\Scripts\png.txt
+
+$List = $Dir | where {$_.extension -eq ".bmp"}
+$List |ft fullname |out-file C:\Scripts\bmp.txt
+
+$List = $Dir | where {$_.extension -eq ".bat"}
+$List |ft fullname |out-file C:\Scripts\bat.txt
+
+$List = $Dir | where {$_.extension -eq ".php"}
+$List |ft fullname |out-file C:\Scripts\php.txt
+
+$List = $Dir | where {$_.extension -eq ".rtf"}
+$List |ft fullname |out-file C:\Scripts\rtf.txt
+
+$List = $Dir | where {$_.extension -eq ".doc"}
+$List |ft fullname |out-file C:\Scripts\doc.txt
+
+$List = $Dir | where {$_.extension -eq ".docx"}
+$List |ft fullname |out-file C:\Scripts\docx.txt
+
+$List = $Dir | where {$_.extension -eq ".gif"}
+$List |ft fullname |out-file C:\Scripts\gif.txt
+
+$List = $Dir | where {$_.extension -eq ".pdf"}
+$List |ft fullname |out-file C:\Scripts\pdf.txt
+
+$List = $Dir | where {$_.extension -eq ".html"}
+$List |ft fullname |out-file C:\Scripts\html.txt
+
+$List = $Dir | where {$_.extension -eq ".zip"}
+$List |ft fullname |out-file C:\Scripts\zip.txt
+
+$List = $Dir | where {$_.extension -eq ".xls"}
+$List |ft fullname |out-file C:\Scripts\xls.txt
+
+$List = $Dir | where {$_.extension -eq ".exe"}
+$List |ft fullname |out-file C:\Scripts\exe.txt
+
+# List | format-table name
