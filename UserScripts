@@ -23,5 +23,8 @@ awk -F':' '{ if($3 >= 1000) print $1 }' /etc/passwd | sed 's/$/:InSecT1234!@#$/'
 # Change passwords for all non-daemon users
 for user in $(grep "bash" /etc/passwd | cut -d':' -f1); do echo $user':InSecT1234!@#$' | chpasswd; done
 
+#Change passwords for all AD users
+DSQUERY user -limit 0 | DSMOD user -pwd [password]
+
 
 
